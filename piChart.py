@@ -4,7 +4,7 @@ dict_emotions = {'Angry':0,'Disgust':0,'Fear':0,'Happy':0,'Neutral':0, 'Sad':0, 
 
 # for emotion in dict_emotions:
 
-for line in open('alakh_file.txt', 'r'):
+for line in open('suhali_file.txt', 'r'):
     dict_emotions[line[:len(line) - 1]] = dict_emotions[line[:len(line)-1]] + 1
 
 print(dict_emotions)
