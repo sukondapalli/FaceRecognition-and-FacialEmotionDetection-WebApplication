@@ -10,7 +10,7 @@ classifier =load_model('model.h5')
 
 emotion_labels = ['Angry','Disgust','Fear','Happy','Neutral', 'Sad', 'Surprise']
 
-cap = cv2.VideoCapture('Test_Vid.mp4')
+cap = cv2.VideoCapture('Test_video.mp4')
 
 predictions = []
 
@@ -46,7 +46,7 @@ while True:
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         # print(predictions)
-        textfile = open("alakh_file.txt", "w")
+        textfile = open("suhali_file.txt", "w")
         for element in predictions:
             textfile.write(element + "\n")
         textfile.close()
