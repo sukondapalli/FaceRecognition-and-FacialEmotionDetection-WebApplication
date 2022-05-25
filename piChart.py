@@ -22,4 +22,3 @@ plt.pie(sizes, labels=labels)
 
 plt.axis('equal')
 plt.show()
-

@@ -1,0 +1,248 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Lora', serif;
+}
+
+
+/*--------header-------*/
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    /*background-image: url("images/Modern Green Smile Life Insurance Logo.png");*/
+    background-color: #f4efe9;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color:#335b4a;
+    text-decoration: none;
+    font-size: 16px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #335b4a;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #335b4a;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font: 14px;
+    color: #335b4a;
+}
+.btn{
+    display: inline-block;
+    color:#335b4a;
+    text-decoration: none;
+    font-size: 13px;
+    border: 1px solid #335b4a;
+    padding: 12px 34px;
+    position: relative;
+    background: transparent;
+    cursor: pointer;
+}
+.btn:hover{
+    font-weight: bolder;
+    border: 2px solid #335b4a;
+}
+
+@media (max-width: 700px) {
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background-color: #335b4a;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+}
+
+
+/*------intro------*/
+
+.Intro{
+    background-color: #ebbab0;
+    min-height: 100vh;
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+intro-div{
+    height: 100%;
+    background-color: #ebbab0;
+
+}
+.intro-div h2{
+    font-weight: bold;
+    height: 100%;
+    color:#335b4a;
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 50px;
+}
+.intro-div p{
+    color: #f4efe9;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 70px;
+    padding-top: 50px;
+    margin: auto;
+}
+
+
+/*------footer------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    color:#335b4a;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    text-decoration:underline;
+}
+.footer p{
+    margin: auto;
+}
+
+.icons .fa{
+    margin: 0 20px;
+    cursor: pointer;
+    padding: 20px 0;
+    color: #ebbab0;
+}
+
+.fa-heart{
+    color: #ebbab0;
+}
+
+
+/*-----------------cells page------------------*/
+
+.sub-header{
+    height: 100vh;
+    width: 100%;
+    background-color: #f4efe9;
+    color: #335b4a;
+}
+.sub-header h1{
+    font-size: 35px;
+    font-weight: 600;
+    padding-left: 700px;
+    padding-bottom: 20px;
+}
+.sub-header h2{
+    font-size: 25px;
+    font-weight: 600;
+    padding-left: 510px;
+    padding-bottom: 50px;
+}
+
+
+/*--------first row of cells---------*/
+.row1{
+    flex: 1;
+    text-align: center;
+}
+.row1 ul li{
+    width: 15%;
+    list-style: none;
+    display: inline-block;
+    padding: 50px 20px;
+    position: relative;
+    transform: scale(2);
+    cursor: pointer;
+}
+
+
+/*------second row of cells---------*/
+.row2{
+    flex: 1;
+    text-align: center;
+}
+.row2 ul li{
+    width: 15%;
+    list-style: none;
+    display: inline-block;
+    padding: 50px 20px;
+    position: relative;
+    transform: scale(2);
+    cursor: pointer;
+}
+
+/*-----------------cell-9 page------------------*/
+
+.inmate-btn{
+    display:inline-block;
+    margin: auto;
+    text-align: center;
+    color:#335b4a;
+    text-decoration: none;
+    font-size: 13px;
+    border: 1px solid #335b4a;
+    padding: 12px 34px;
+    background: transparent;
+    cursor: pointer;
+}
+.inmate-btn:hover{
+    font-weight: bolder;
+    border: 2px solid #335b4a;
+}
+
+

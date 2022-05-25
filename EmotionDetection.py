@@ -1,6 +1,6 @@
 from keras.models import load_model
 from time import sleep
-from keras.preprocessing.image import img_to_array
+from keras.utils import img_to_array
 from keras.preprocessing import image
 import cv2
 import numpy as np
@@ -49,6 +49,7 @@ while True:
         textfile = open("suhali_file.txt", "w")
         for element in predictions:
             textfile.write(element + "\n")
+            print(element)
         textfile.close()
         break
 

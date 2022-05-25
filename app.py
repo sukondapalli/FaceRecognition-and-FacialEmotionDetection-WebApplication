@@ -18,23 +18,7 @@ cap = cv2.VideoCapture(0)
 pred = "Unknown"
 
 
-# @app.route('/')
-# def home():
-#     return render_template('about.html')
-
-
-# @app.route('/predict', methods=['POST'])
-# def home():
-#     data1 = request.form['a']
-#     data2 = request.form['b']
-#     data3 = request.form['c']
-#     data4 = request.form['d']
-#     arr = np.array([[data1, data2, data3, data4]])
-#     pred = model.predict(arr)
-#     return render_template('after.html', data=pred)
-
 camera = cv2.VideoCapture(0)
-
 
 def generate_frames():
 
@@ -44,7 +28,7 @@ def generate_frames():
 
         ## read the camera frame
         success, frame = camera.read()
-        if (not success|time ==0):
+        if (not success):
             break
         else:
             face_locations, face_names = sfr.detect_known_faces(frame)
@@ -62,16 +46,20 @@ def generate_frames():
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
-    if(status == "verified"):
-        print(status)
-        return redirect('/analysis')
-    else:
-        print(status)
-        return redirect('/analysis')
+    # if(status == "verified"):
+    #     print(status)
+    #    return redirect('/analysis')
+    # else:
+    #     print(status)
+    #     return redirect('/analysis')
 
 @app.route('/')
 def index():
-    return render_template('about.html')
+    return render_template('homepage.html')
+
+@app.route('/cells')
+def cells():
+        return render_template('cells.html')
 
 @app.route('/analysis')
 def analysis():
@@ -83,6 +71,4 @@ def video():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-
 
