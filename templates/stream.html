@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!----------header--------->
+    <head>
+            <meta name="viewport" content="with=device-width", intial-scale="1.0">
+            <title>REVIVE Rehabilitation Centre-CELLS </title>
+            <link rel="shortcut icon" type="image/png" href="static/lotus (2).png">
+            <link rel="stylesheet" href="static/css/style1.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600&display=swap" rel="stylesheet">
+            <script src="https://kit.fontawesome.com/3cb81d5d8f.js" crossorigin="anonymous"></script>
+    </head>
+
+
+    <body>
+        <section class="sub-header">
+                <nav>
+                    <a href=homepage><img src="static/logo.jpeg"></a>
+                    <div class="nav-links">
+                        <ul>
+                            <li><a href=homepage>HOME</a></li>
+                            <li><a href="">PROGRAMS</a></li>
+                            <li><a href="">CARE</a></li>
+                            <li><a href=reviews>REVIEWS</a></li>
+                            <li><a href=contact>CONTACT</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+
+            <!------form with video and button----->
+            <form method="post" action="{{ url_for('tasks') }}">
+                <input type="submit" class="inmate-btn" value="Verify" name="Verify" href="cells.html" />
+            </form>
+
+            <!------video stream----->
+            <div class="container">
+                <img src="{{ url_for('video') }}">
+            </div>
+
+        </section>
+    </body>
+
+
+    <!-----------footer----------->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>
+            At REVIVE, we recognize that each individual has a unique set of circumstances and a unique set of goals. <br>Hence,
+            we accommodate limited clients at one time in order to design and execute customized treatment plans for each individual.
+        </p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa-regular fa-heart"></i> by Suhali Kondapalli</p>
+    </section>
+</html>

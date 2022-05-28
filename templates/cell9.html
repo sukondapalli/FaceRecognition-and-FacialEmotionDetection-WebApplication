@@ -1,48 +1,114 @@
 <!DOCTYPE html>
 <html>
+<!-----------header---------->
     <head>
         <meta name="viewport" content="with=device-width", intial-scale="1.0">
         <title>REVIVE Rehabilitation Centre-CELLS </title>
-        <link rel="stylesheet" href="style1.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="shortcut icon" type="image/png" href="static/lotus (2).png">
+        <link rel="stylesheet" href="static/css/style1.css"><link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/3cb81d5d8f.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     </head>
 
 
     <body>
         <section class="sub-header">
             <nav>
-                <a href="homepage.html"><img src="images/WhatsApp Image 2022-05-21 at 9.42.46 PM.jpeg"></a>
+                <a href=homepage><img src="static/logo.jpeg"></a>
                 <div class="nav-links">
                     <ul>
-                        <li><a href="homepage.html">HOME</a></li>
-                        <li><a href="">ABOUT</a></li>
+                        <li><a href=homepage>HOME</a></li>
+                        <li><a href="">PROGRAMS</a></li>
                         <li><a href="">CARE</a></li>
-                        <li><a href="">BLOG</a></li>
-                        <li><a href="">CONTACT</a></li>
+                        <li><a href=reviews>REVIEWS</a></li>
+                        <li><a href=contact>CONTACT</a></li>
                     </ul>
                 </div>
             </nav>
             <h1>CELL 9:</h1>
-            <a href="" class="inmate-btn">Inspect status of inmate</a>
+<!--        <a href="" class="btn">Click me for Emotional status of inmate over the past week.</a>-->
+            <button type='button' onclick="toggleText()" class="cell9-btn" id ='retrieve'>Click me for Emotional status of inmate
+                over the past week.
+            </button>
+            <img src="" class="img9" id="myimg" />
+
+            <script>
+            function toggleText() {
+                var text = document.getElementById("demo");
+                if (text.style.display === "block") {
+                    text.style.display = "none";
+                }
+                else {
+                    text.style.display = "block";
+                }
+            }
+            </script>
+
+            {% if emotion == 'Angry' %}
+            <h2 id='demo' style='display: block'>Inmate is Angry most of the time. It is recommended for you to come see them ASAP. <br>
+                For further details, click above.</h2>
+
+            {% elif emotion == 'Disgust' %}
+            <h2 id='demo' style='display: block'>Inmate is showing steady recovery. <br> For further details, click above.</h2>
+
+            {% elif emotion == 'Fear' %}
+            <h2 id='demo' style='display: block'>Inmate is portraying disturbed behaviour over the past week. Don't worry, we have the situation under control.
+                It is highly recommended for you to come to the Rehab center. <br> For further details, click above.</h2>
+
+            {% elif emotion == 'Happy' %}
+            <h2 id='demo' style='display: block'>Inmate is experiencing a healthy and happy recovery at REVIVE.
+                <br> For further details, click above.</h2>
+
+            {% elif emotion == 'Neutral' %}
+            <h2 id='demo' style='display: block'>Inmate is showing steady recovery. <br> For further details, click above.</h2>
+
+            {% elif emotion == 'Sad' %}
+            <h2 id='demo' style='display: block'>Inmate is portraying disturbed behaviour over the past week. Don't worry, we have the situation under control.
+                It is highly recommended for you to come to the Rehab center. <br> For further details, click above.</h2>
+
+            {% elif emotion == 'Surprise' %}
+            <h2 id='demo' style='display: block'>Inmate is showing steady recovery. <br> For further details, click above.</h2>
+
+            {%endif%}
+
         </section>
+
     </body>
+
+    <script>
+    $(document).ready(function() {
+       $('#retrieve').click(function(){
+           $.ajax({
+           url: "{{ url_for ('get_img') }}",
+           type: "GET",
+           success: function(response) {
+               $("#myimg").attr('src', '/static/' + response);
+          },
+          error: function(xhr) {
+            //Do Something to handle error
+         }
+         });
+       });
+    });
+    </script>
         
 
-<!------footer------->
-<section class="footer">
-    <h4>About Us</h4>
-    <p>
-        At REVIVE, we recognize that each individual has a unique set of circumstances and a unique set of goals. <br>Hence, we accommodate limited clients at one time in order to design and execute customized treatment plans for each individual.
-    </p>
-    <div class="icons">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-linkedin"></i>
-    </div>
-    <p>Made with <i class="fa-regular fa-heart"></i> by Suhali Kondapalli</p>
-</section>
+    <!---------footer--------->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>
+            At REVIVE, we recognize that each individual has a unique set of circumstances and a unique set of goals. <br>Hence,
+            we accommodate limited clients at one time in order to design and execute customized treatment plans for each individual.
+        </p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa-regular fa-heart"></i> by Suhali Kondapalli</p>
+    </section>
 
 </html>

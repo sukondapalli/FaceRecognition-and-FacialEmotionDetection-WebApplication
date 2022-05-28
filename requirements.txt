@@ -3,3 +3,6 @@ dlib
 face_recognition
 numpy
 opencv-python
+flask
+keras
+matplotlib

@@ -19,6 +19,6 @@ for x, y in dict_emotions.items():
 
 # Plot
 plt.pie(sizes, labels=labels)
-
 plt.axis('equal')
+plt.savefig('emotionAnalysis.png')
 plt.show()
