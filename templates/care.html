@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<!-----------header--------->
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>REVIVE Rehabilitation Centre </title>
+        <link rel="shortcut icon" type="image/png" href="static/favicon.png">
+        <link rel="stylesheet" href="static/css/style1.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
+              integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600&display=swap">
+        <script src="https://kit.fontawesome.com/3cb81d5d8f.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <section class="header">
+            <nav>
+                <a href=homepage><img src="static/logo.jpeg"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href=homepage>HOME</a></li>
+                        <li><a href=programs>PROGRAMS</a></li>
+                        <li><a href=care>CARE</a></li>
+                        <li><a href=reviews>REVIEWS</a></li>
+                        <li><a href=contact>CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+
+        <!-----------testimonials----------->
+        <section class="reviews">
+            <h1>Treatments Available:</h1>
+            <h2>We provide a variety of Treatment plans.</h2>
+
+            <div class="row">
+                <div class="care-col">
+                    <a href=""><img src="static/care1.jpeg"></a>
+                    <div>
+                        <h3>Cognitive Behavioral Therapy (CBT)</h3>
+                        <p>CBT is a crucial part of the addiction treatment process at Sanctum. We give
+                            you the best chances of recovering from addiction, so we use methods that work. There are many facilities
+                            that only use philosophies without any type of scientific backing. Cognitive behavioral therapy is
+                            evidence-based, which is a vital component of treatment.</p>
+                    </div>
+                </div>
+                <div class="care-col">
+                    <a href=""><img src="static/care2.jpeg"></a>
+                    <div>
+                        <h3>Individual Therapy for Anxiety</h3>
+                        <p>When you’re in your active addiction, it’s possible for you to feel alone, isolated, misunderstood and unheard.
+                            We want to change that. One of the primary reasons you may continue using is because you feel like nobody understands.
+                            The other major issue that you may deal with is feeling as though those you love are judging you. Our therapists
+                            come from a place of caring and understanding, without judgment. Through individual therapy, you’ll get the one-on-one
+                            attention and support you need to overcome your addiction.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        </section>
+
+
+
+        <!-----------JavaScript for Toggle Menu------------>
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right="0";
+            }
+            function hideMenu(){
+                navLinks.style.right="-200px";
+            }
+        </script>
+
+    </body>
+
+
+    <!-----------footer----------->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>
+            At REVIVE, we recognize that each individual has a unique set of circumstances and a unique set of goals.<br>Hence,
+            we accommodate limited clients at one time in order to design and execute customized treatment plans for each individual.
+        </p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa-regular fa-heart"></i> by Suhali Kondapalli</p>
+    </section>
+</html>

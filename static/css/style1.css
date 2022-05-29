@@ -459,3 +459,23 @@ h3{
     box-sizing: border-box;
 }
 
+
+/*-------------Care page-------------*/
+.care-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-top: 3.5%;
+    margin-bottom: 5%;
+    text-align: left;
+    background-color:#ebbab0;
+    opacity: 0.9;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.care-col img{
+    height: 40px;
+    margin-right: 30px;
+    margin-left: 5px;
+    /* border-radius: 50%; */
+}

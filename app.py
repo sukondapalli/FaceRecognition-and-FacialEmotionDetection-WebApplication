@@ -77,7 +77,7 @@ def emotionDetection(Videofilename):
 
                 break
         else:
-            textfile = open("suhali_file.txt", "w")
+            textfile = open("file.txt", "w")
             for element in predictions:
                 textfile.write(element + "\n")
             textfile.close()
@@ -198,6 +198,10 @@ def cells():
 def contact():
     return render_template('contact.html')
 
+@app.route('/care')
+def care():
+    return render_template('care.html')
+
 @app.route('/stream')
 def stream():
     return render_template('stream.html')
@@ -210,7 +214,7 @@ def video():
 def cell9():
     status = isVerified("cell9.txt", NAME)
     if(status == "verified"):
-        text_filename = emotionDetection("Test_video.mp4")
+        text_filename = emotionDetection("patientvid.mp4")
         label = createPi(text_filename)
         return render_template('cell9.html', emotion=label)
     else:
