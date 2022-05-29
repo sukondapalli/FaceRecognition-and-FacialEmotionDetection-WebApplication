@@ -1,8 +1,9 @@
 cmake
 dlib
-face_recognition
+face-recognition
 numpy
 opencv-python
 flask
 keras
 matplotlib
+tensorflow

@@ -7,8 +7,10 @@ This project is an entry in Microsoft Engage 2022.
 ## Tools and Libraries used:
 - Python - face_recognition - https://pypi.org/project/face-recognition/
 - cmake - https://cmake.org/documentation/
+- keras - https://keras.io/api/
+- dlib - http://dlib.net/python/index.html
 
-_Note:_ Use Heroku or any other cloud service for the application to run.
+_Note:_ You can use Heroku or any other cloud service for the application to run.
 
 ## Working:
 Here we have a detailed explanation regarding the workflow of the WebApp.
@@ -38,7 +40,8 @@ There are other webpages for Programs, Care, Reviews and Contact pages as well. 
 For further understanding, refer to the flow diagram of my website at:
 https://drive.google.com/file/d/1y_p29exw_yInqN4lpibHMWQi8DL9cpkY/view?usp=sharing
 
-I have also uploaded a video explaining the workflow of my website at:
+I have also uploaded a video explaining the workflow of my website at:  
+https://drive.google.com/file/d/1Dwc4kk9icSNzn6SstzZKfxuOzOPLDS9D/view?usp=sharing
 
 
 ## Installation:
@@ -49,12 +52,12 @@ To install all the libraries needed, run `-r requirements.txt`.
 
 ## Instructions:
 
-To start the Flask app, run the python file `app.py`. 
+To start the Flask app, run the python file `app.py`.  
+If you want to run from terminal, run the command python `app.py`.
 
 
 ## References:
-- Documentation:
-https://pypi.org/project/face-recognition/
+- Documentation: https://pypi.org/project/face-recognition/
 - GitHub repos: https://github.com/akmadan/Emotion_Detection_CNN
-- Content for webpage:
-https://www.sanctumwellness.org/
+- Content for webpage: https://www.sanctumwellness.org/
+- Articles referred to: https://www.hindawi.com/journals/complexity/2019/3581419/
